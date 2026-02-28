@@ -1,0 +1,665 @@
+/* ======================================================
+   1. ROOT VARIABLES
+====================================================== */
+
+:root {
+  --gold: #d8a441;
+  --bg: #ffffff;
+  --bg-light: #ffd08e;
+  --card: #fff9eb;
+  --text-main: #000000;
+  --text-soft: #444;
+}
+
+/* ======================================================
+   2. BASE STYLES
+====================================================== */
+
+body {
+  margin: 0;
+  font-family: "Lora";
+  background: var(--bg);
+  color: var(--text-main);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1 { font-size: 32px; }
+h2 { 
+    font-size: 28px; 
+    text-align: center; }
+h3 { font-size: 24px; }
+h4 { font-size: 20px; }
+p  { font-size: 16px; }
+
+/* ======================================================
+   3. HEADER
+====================================================== */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  background: #b3781f;
+  backdrop-filter: blur(6px);
+  color: white;
+
+  padding: 16px 32px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.logo {
+  height: 100px;
+  width: auto;
+}
+
+.brand {
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.burger {
+  display: none;
+}
+
+nav a {
+  color: white;
+  margin-right: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: var(--gold);
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* ======================================================
+   4. HERO
+====================================================== */
+
+.hero {
+  position: relative;
+  text-align: center;
+  height: 400px;
+  padding: 80px 20px;
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0,0,0,.6);
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  transition: background-image 0.8s ease-in-out;
+  overflow: hidden;
+}
+
+/* Weißer Filter */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.404); /* Stärke hier anpassen */
+  z-index: 1;
+}
+
+/* Inhalt über Overlay */
+.hero > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* ======================================================
+   5. TIMELINE
+====================================================== */
+
+.timeline-wrapper {
+  position: relative;
+  padding: 100px 0;
+}
+
+.timeline {
+  position: relative;
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background: rgba(216,164,65,0.3);
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 40px;
+  box-sizing: border-box;
+
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  will-change: opacity, transform;
+}
+
+.timeline-item.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.timeline-item.left {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-item.right {
+  left: 50%;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  top: 50px;
+  width: 18px;
+  height: 18px;
+  background: var(--gold);
+  border-radius: 50%;
+  box-shadow: 0 0 0 8px rgba(216,164,65,0.2);
+  z-index: 2;
+}
+
+.timeline-item.left::before { right: -9px; }
+.timeline-item.right::before { left: -9px; }
+
+.content {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 30px;
+  backdrop-filter: blur(8px);
+  cursor: pointer;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.date {
+  color: var(--gold);
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+.timeline-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0;
+}
+
+.timeline-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+  line-height: 1.6;
+  color: var(--text-soft);
+}
+
+.timeline-list li::before {
+  content: "";
+  flex-shrink: 0;
+  margin-top: 0.55em;
+  width: 8px;
+  height: 8px;
+  background: var(--gold);
+  border-radius: 50%;
+}
+
+.timeline-media {
+  margin: 20px 0;
+  border-radius: 14px;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  object-position: center top;
+}
+
+.timeline-media img,
+.timeline-media video,
+.timeline-media iframe {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.timeline-media video {
+  max-height: 260px;
+  object-fit: cover;
+}
+
+#lightbox-container {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 200;
+}
+
+#lightbox-container.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+#lightbox {
+  max-width: 90%;
+  max-height: 90%;
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+}
+
+#lightbox-container.active #lightbox {
+  transform: scale(1);
+}
+.lightbox-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 20px;
+  z-index: 210;
+}
+
+#lightbox-prev {
+  left: 20px;
+}
+
+#lightbox-next {
+  right: 20px;
+}
+
+.lightbox-arrow:hover {
+  color: var(--gold);
+}
+/* ======================================================
+   6. GALLERY
+====================================================== */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  aspect-ratio: 4 / 3; 
+  object-fit: cover;  
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,.2);
+}
+
+/* ======================================================
+   7. QUIZ
+====================================================== */
+
+.quiz-container {
+  width: 80%;
+  max-width: 720px;
+  margin: 60px auto;
+}
+
+.quiz-card {
+  background: var(--card);
+  padding: 32px;
+  border-radius: 18px;
+  box-shadow:
+    0 20px 40px rgba(0,0,0,0.08),
+    inset 0 1px 0 rgba(255,255,255,0.6);
+  animation: fadeIn 0.5s ease;
+}
+
+#question {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  margin-bottom: 28px;
+}
+
+.answers button {
+  width: 100%;
+  margin: 10px 0;
+  padding: 14px 18px;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 12px;
+  font-size: 1rem;
+  background: var(--bg-light);
+  cursor: pointer;
+  text-align: left;
+
+  transition: background 0.3s ease,
+              transform 0.2s ease,
+              box-shadow 0.2s ease;
+}
+
+.answers button:hover {
+  background: #f6f0e6;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+}
+
+.answers button.correct {
+  background: #e6f4ea;
+  border-color: #69c58a;
+  color: #2f6f44;
+}
+
+.answers button.wrong {
+  background: #fbeaea;
+  border-color: #e07b7b;
+  color: #8a2e2e;
+}
+
+.next-btn {
+  width: 100%;
+  padding: 14px;
+  margin-top: 28px;
+  background: var(--gold);
+  color: white;
+  border: none;
+  border-radius: 14px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.next-btn:hover:not(:disabled) {
+  background: #b88a2f;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.15);
+}
+
+.next-btn:disabled {
+  background: #e0d3b0;
+  cursor: not-allowed;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+/* =========================================
+   QUIZ RESULT SCREEN
+========================================= */
+
+.result-screen {
+  text-align: center;
+  animation: fadeIn 0.6s ease;
+}
+
+.result-title {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: var(--gold);
+}
+
+.result-score {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+
+/* Fortschrittsbalken */
+.result-bar {
+  width: 100%;
+  height: 14px;
+  background: #eee;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.result-progress {
+  height: 100%;
+  background: var(--gold);
+  transition: width 0.8s ease;
+}
+
+/* Button */
+.result-btn {
+  padding: 14px 28px;
+  background: var(--gold);
+  border: none;
+  border-radius: 14px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.result-btn:hover {
+  background: #b88a2f;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+
+/* ======================================================
+   8. FOOTER
+====================================================== */
+
+.footer-grid {
+  max-width: 1100px;
+  background: #b3781f;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 32px;
+  text-align: left;
+}
+
+footer h4 {
+  margin-bottom: 12px;
+  color: #000000;
+  font-weight: 600;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  color: #000000;
+}
+
+footer ul li {
+  margin-bottom: 6px;
+  color: #000000;
+}
+
+footer a {
+  color: #000000;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #000000;
+  opacity: 0.85;
+}
+
+/* ======================================================
+   9. RESPONSIVE
+====================================================== */
+
+@media (max-width: 900px) {
+
+  header {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .timeline::before,
+  .timeline-progress {
+    left: 20px;
+  }
+
+  .timeline-item,
+  .timeline-item.left,
+  .timeline-item.right {
+    width: 100%;
+    left: 0;
+    padding-left: 60px;
+    text-align: left;
+  }
+
+  .timeline-item::before {
+    left: 11px;
+  }
+
+  .timeline-media video {
+    max-height: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .hero {
+    padding: 60px 15px;
+  }
+
+  .hero h2 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  header {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .header-left {
+    justify-content: center;
+  }
+
+  .footer-grid {
+    text-align: center;
+  }
+
+}
+/* =========================================
+   MOBILE NAVIGATION
+========================================= */
+
+@media (max-width: 900px) {
+
+  .burger {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 300;
+  }
+
+  .burger span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    border-radius: 3px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  /* Burger Animation */
+  .burger.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .burger.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .burger.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+
+  /* Navigation */
+  nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 250px;
+    background: #b3781f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: right 0.4s ease;
+  }
+
+  nav.active {
+    right: 0;
+  }
+
+  nav a {
+    margin: 15px 0;
+  }
+
+}
+
+
+
+

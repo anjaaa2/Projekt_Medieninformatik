@@ -1,0 +1,366 @@
+<!DOCTYPE html> 
+
+<html lang="de">
+<head> 
+    <meta charset="UTF-8" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+    <title>Familienbäckerei Schmidt</title> 
+    <link rel="stylesheet" href="styles/style1.css" /> 
+</head> 
+
+<body> 
+    <!-- Navigation --> 
+    <header> 
+      <div class="header-left">
+       <img src="assets/images/Logo_Baeckerei.png" alt="Bäckerei Schmidt Logo" class="logo">
+       <span class="brand">Bäckerei Schmidt</span>
+      </div>
+
+      <button class="burger" id="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav> 
+       <nav id="nav">
+          <a href="#start">Start</a> 
+          <a href="#Team">Das Team</a> 
+          <a href="#historie">Firmengeschichte</a> 
+          <a href="#galerie">Galerie</a> 
+          <a href="#leistungen">Unsere Leistungen</a> 
+      </nav> 
+    </header>
+
+    <!-- Überschrift --> 
+    <section id="start" class="hero">
+     <div class="overlay"></div>
+
+     <div class="hero-content">
+       <h1>Unser Gebäck – eine Tradition seit 1948</h1>
+        <p>Wir möchten dir die Geschichte unserer Bäckerei Schmidt erzählen. Bist du bereit für eine Zeitreise?</p>
+     </div>
+    </section>
+
+<!-- Timeline -->
+    <section id="historie" class="timeline-wrapper">
+      <h2>Die Geschichte – von großen Träumen und der Leidenschaft einer Familie.</h2>
+
+      <div class="timeline">
+
+    <div id="lightbox-container">
+      <button id="lightbox-prev" class="lightbox-arrow">❮</button>
+      <img id="lightbox">
+      <button id="lightbox-next" class="lightbox-arrow">❯</button>
+      <span id="lightbox-close">✕</span>
+    </div>    
+
+    <!-- 1948 -->
+    <div class="timeline-item left">
+      <div class="content">
+        <span class="date">1948</span>
+        <h3>Wie alles begann – Die Geburtsstunde der „Bäckerei Schmidt“</h3>
+            <div class="timeline-media">
+            <img src="assets/images/altemuehle.jpg" class="lightbox-trigger" alt="Alte Mühle der Bäckerei Schmidt 1948"> 
+            </div>
+        <p>
+          Wilhelm Schmidt gründete die Bäckerei bei einer alten Mühle in der kleinen
+          Stadt Lübbenau. Dort wurden die ersten Brote mit ganz einfacher Ausstattung,
+          aber großen Träumen von unserem damals 26-jährigen Gründer Wilhelm und seiner
+          Frau Alma gebacken.
+        </p>
+        <p>
+          Im Frühjahr 1948 traf Wilhelm die Entscheidung, seine eigene Bäckerei zu
+          eröffnen. Am 26. Juli 1948 backte er das erste Brot im Namen seiner eigenen
+          Bäckerei „Bäckerei Schmidt“ – im alten gemauerten Steinofen und mit wenigen
+          Zutaten.
+        </p>
+      </div>
+    </div>
+
+    <!-- 1950–1960 -->
+    <div class="timeline-item right">
+      <div class="content">
+        <span class="date">1950–1960</span>
+        <h3>Die erste richtige Familienbäckerei</h3>
+          <div class="timeline-media">
+            <img src="assets/images/bäckerei_1954.png" class="lightbox-trigger" alt="Familie Schmidt vor ihrer Bäckerei">
+          </div>
+        <p>
+          Die „Bäckerei Schmidt“ musste nicht lange auf Erfolg warten. In der gesamten
+          Umgebung war schnell bekannt, dass es dort nicht nur das beste Brot der Stadt,
+          sondern auch süßes Gebäck und frische Brötchen gab.
+        </p>
+        <p>
+          1954 kauften Wilhelm und Alma ihr eigenes Geschäft in der Innenstadt. Wilhelm
+          wurde Bäckermeister, Alma übernahm den Verkauf – jeder in der Umgebung kannte sie.
+        </p>
+        <p>
+          Im Herbst 1956 gab es Familienzuwachs, denn ihr Sohn Daniel wurde geboren. Er wuchs zwischen Mehl und
+          Rührschüsseln auf und gewann ganz schnell die Herzen aller Gäste.
+        </p>
+      </div>
+    </div>
+
+    <!-- 1970er -->
+    <div class="timeline-item left">
+      <div class="content">
+        <span class="date">1970er</span>
+        <h3>Wie der Vater, so der Sohn</h3>
+         <div class="timeline-media">
+            <img src="assets/images/daniel_meisterbäcker.png" class="lightbox-trigger" alt="Familie Schmidt vor ihrer Bäckerei">
+         </div>
+        <p>
+          Die Zeit verging schnell und die Bäckerei florierte. Im Jahr 1972 begann Daniel, nachdem er bereits sein ganzes Leben 
+          in der Bäckerei verbacht hatte, im Alter von 16 Jahren seine offizielle Bäckerlehre. 1975 schloss er
+          seine Meisterprüfung erfolgreich ab, nun gab es zwei Bäckermeister.
+        </p>
+        <p>
+          Vater und Sohn führen die Geschäfte nun gemeinsam. Dadurch entstanden viele neue Rezepte und der erste elektrische Ofen zog ein. 
+          Auch Alma unterstütze die beiden weiter tatkräftig. Die Bäckerei Schmidt war nun ein richtiger Familienbetrieb mit bereits 30 Jahren Tradition.
+        </p>
+      </div>
+    </div>
+
+    <!-- 1980er -->
+    <div class="timeline-item right">
+      <div class="content">
+        <span class="date">1980er</span>
+        <h3>Die zweite Generation übernimmt</h3>
+        <div class="timeline-media">
+          <video src="assets/video/bäckerei.mp4" autoplay muted loop playsinline></video>
+        </div>
+        <p>
+          Nach sehr erfolgreichen und auch oft anstrengenden 35 Jahren entschied Wilhelm, dass es an der Zeit war sich ein wenig zurück zu nehmen
+          und der nächsten Generation die Verantwortung zu überlassen. Natürlich arbeitete er weiterhin tatkräftig weiter in der Bäckerei, da er sein 
+          Handwerk nach wie vor sehr liebte.
+        </p>
+        <p>
+          Also übernahm Daniel im Mai 1983 nun offiziell das Familiengeschäft und war sehr stolz darauf. Die traditionellen Rezepte
+          blieben erhalten, die Ausstattung wurde behutsam modernisiert, sodass die Bäckerei bereits 5 Jahre später in ganz neuem Glanz erschien.
+        </p>
+      </div>
+    </div>
+
+    <!-- 1992 -->
+    <div class="timeline-item left">
+      <div class="content">
+        <span class="date">1992</span>
+        <h3>Ein zweiter Standort eröffnet</h3>
+          <div class="timeline-media">
+            <img src="assets/images/eroeffnung_zweiter_standort.png" class="lightbox-trigger" alt="Neue Filiale">
+          </div>
+          <p>
+            Im Jahr 1992 kam es zu einem ganz besonderen Meilenstein in der Geschichte der Bäckerei. Die erste weitere Filiale direkt am 
+            Marktplatz von Lübbenau wurde eröffnet. Damit ging ein weiterer großer Traum der Familie in Erfüllung.  
+          </p>
+          <p>
+            Da die Bäckerei bereits seit fast 45 Jahren in der Stadt existierte und für die Menschen in der Stadt ein ganz besonderer Ort
+            war, durften wir uns damals über sehr viele Gäste freuen und die Eröffnung wurde zu einem wundervollen Fest an das wir heute 
+            noch gerne zurück denken.
+          </p>  
+      </div>
+    </div>
+
+    <!-- 1999 -->
+    <div class="timeline-item right">
+      <div class="content">
+        <span class="date">1999</span>
+        <h3>Das „Schmidt-Frühstück“ entsteht</h3>
+          <div class="timeline-media">
+            <img src="assets/images/schmidt_fruehstueck.jpg" class="lightbox-trigger" alt="Neue Tradition">
+          </div>
+          <p>
+            Im Jahr 1999 führte Daniel eine neue Tradition ein, welche bis heute in all unseren Filialen bestand hat. Bis 12 Uhr gab es 
+            von dort an unser liebevoll zubereitetes "Schmidt Frühstück". Dieses Frühstücks-Menü vereint all die liebsten Gebäcke unserer Gäste. 
+          </p>
+            Ein fester Bestandteil unseres Frühstücks waren bereits damals unsere ganz besonderen Croissants mit regionalem Honig. Mit der 
+            Zeit entwickelten wir noch weitere Spezialitäten, damit jeder Gast das perfekte Frühstück bei uns bekommen könnte. natürlich dafür 
+            hierfür auch Kaffee für die Erwachsenen oder Kakao für unsere kleine Gäste nicht fehlen.  
+        </p>
+      </div>
+    </div>
+
+    <!-- 2005 -->
+    <div class="timeline-item left">
+      <div class="content">
+        <span class="date">2005</span>
+        <h3>Zwei weitere Filialen eröffnen</h3>
+          <div class="timeline-media">
+            <img src="assets/images/bäckerei_1.jpg" class="lightbox-trigger" alt="Neue Filiale">
+          </div>
+          <p>
+            In der Umgebung sprach sich mit der Zeit herum wie zufrieden unsere Gäste mit unseren Backwaren waren. Die steigende Beliebtheit 
+            unserer Bäckerein führte zur Eröffnung von zwei weiteren Filialen in benachbarten Städten. 
+          </p>
+            Auch dort wurden wir sehr herzlich empfangen und zum Glück waren die Besucher auch dort stets zufrieden mit uns. Umso mehr Filialen
+            wir eröffneten, desto größer wurde unser Team und wir wuchsen alle zu einer richtigen Familie zusammen.
+          <p>
+
+          </p>
+      </div>
+    </div>
+
+    <!-- 2010 -->
+    <div class="timeline-item right">
+      <div class="content">
+        <span class="date">2010</span>
+        <h3>Die dritte Generation bringt frischen Wind</h3>
+          <div class="timeline-media">
+            <img src="assets/images/bäckerei_2.jpg" class="lightbox-trigger" alt="Neue Filiale">
+          </div>
+        <p>
+          Daniels Tochter Anna stieg natürlich auch sobald sie konnte in das Familiengeschäft mit ein und erweitert die Bäckerei um eine Konditorei. 
+          Da ihre Leidenschaft schon klein an besonders den süßen Gebäcken galt. Sie liebte es bereits als Kind Torten und Küchlein zu backen.
+        </p>
+        <p>
+          Mit der Zeit wurde sie immer besser und konnte bereits mit 12 Jahren ganz besondere Kunstwerke kreieren. Sobald sie fester Teil der 
+          Bäckerei war gab es neben Brot und Brötchen auch noch besonders leckere Cupcakes und kunstvolle Torten.
+        </p>
+      </div>
+    </div>
+
+    <!-- 2020 -->
+    <div class="timeline-item left">
+      <div class="content">
+        <span class="date">2020</span>
+        <h3>Pandemie – Herausforderungen und Wachstum</h3>
+          <div class="timeline-media">
+            <img src="assets/images/pandemie_2020.png" class="lightbox-trigger" alt="Neue Filiale">
+          </div>
+          <p>
+            Das Jahr 2020 war auch für uns eine deutliche Herausforderung. Wir mussten wegen der Pandemie unsere Filialen schließen und wussten
+            zuerst nicht wie es weiter gehen soll. Doch mit kreativen Ideen wie Lieferservice und Fensterverkaufen haben wir auch diese Zeit überstanden.
+          </p>
+          <p>
+            Bis heute sind wir sehr dankbar für die Unterstützung unserer tollen Kunden und werden diese Zeit so schnell nicht vergessen. Wir haben 
+            gemerkt, dass auch unsere Gäste unser Geschäft ausmachen und sind an dieser Zeit gemeinsam gewachsen.
+          </p>
+      </div>
+    </div>
+
+    <!-- 2023 -->
+    <div class="timeline-item right">
+      <div class="content">
+        <span class="date">2023</span>
+        <h3>Zurück zur Regionalität</h3>
+          <div class="timeline-media">
+            <img src="assets/images/regionale_zutaten.jpg" class="lightbox-trigger" alt="Neue Filiale">
+          </div>
+        <p>
+          Da wir unseren Gästen nur die beste Qualität bieten wollen haben wir uns im Jahr 2023 dafür entschieden zu traditionellen Zutaten zurückzukehren. 
+          Es werden seitdem ausschließlich regionale und hochwertige Zutaten verwendet, um auf diesem Wege beste Qualität und Nachhaltigkeit zu gewährleisten.
+        </p>
+        <p>
+          Hierfür arbeiten wir mit regionalen Bauern zusammen, dort können wir selbst sehen wie unsere Zutaten produziert werden und so die Qualität sicherstellen.
+          Damit sind wir zu unserer alten Tradition zurückgekehrt, denn die bewährten Rezepte werden nun wieder außschließlich mit Zutaten aus der Umgebung zubereitet. 
+        </p>
+      </div>
+    </div>
+
+    <!-- 2025 -->
+    <div class="timeline-item left">
+      <div class="content">
+        <span class="date">2025</span>
+        <h3>So sieht es heute aus</h3>
+          <div class="timeline-media">
+            <img src="assets/images/baeckerei_aktuell.png" class="lightbox-trigger" alt="Neue Filiale">
+          </div>
+        <ul class="timeline-list">
+          <li>4 Filialen</li>
+          <li>20 Mitarbeiter</li>
+          <li>Anna und ihr Mann führen die Geschäfte</li>
+          <li>Bäckerei & Konditorei vereint</li>
+          <li>Traditionelle Rezepte in moderner Atmosphäre</li>
+          <li>Regionale Zutaten & Liebe als Hauptzutat</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+ 
+
+    <!-- Galerie --> 
+
+  <section id="galerie"> 
+      <h2>Bildergalerie</h2> 
+      <div class="gallery"> 
+          <img src="assets/images/altemuehle.jpg" class="lightbox-trigger" alt="Backstube"> 
+          <img src="assets/images/familienfoto.jpg" class="lightbox-trigger" alt="Brot"> 
+          <img src="assets/images/steinofen.jpg" class="lightbox-trigger" alt="Filiale"> 
+          <img src="assets/images/pandemie_2020_1.png" class="lightbox-trigger" alt="pandemie"> 
+          <img src="assets/images/bäckerei_2.jpg" class="lightbox-trigger" alt="Filiale_2"> 
+          <img src="assets/images/galerie_1.jpg" class="lightbox-trigger" alt="Bildergalerie"> 
+      </div> 
+  </section> 
+
+    <!-- Quiz --> 
+
+  <section id="quiz"> 
+      <h2 class="quiz-title">Unser kleines Bäckerei-Quiz</h2>
+      <p class="quiz-subtitle">
+      Teste jetzt dein Wissen über unsere Bäckerei Schmidt!
+      </p>
+      <p id="quiz-feedback"></p> 
+    <div class="quiz-container"> 
+      <div id="quiz" class="quiz-card"> 
+        <div id="question">Frage wird geladen…</div> 
+        <div id="answers" class="answers"></div> 
+        <button id="next-btn" class="next-btn" disabled>Weiter</button> 
+        <div id="progress" class="progress"></div> 
+      </div> 
+    </div> 
+  </section> 
+    
+
+    <!-- Footer --> 
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <h4>Bäckerei Schmidt</h4>
+        <p>Tradition seit 1948<br>Mit Liebe & regionalen Zutaten</p>
+      </div>
+
+      <div>
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#Impressum">Impressum</a></li>
+          <li><a href="#Das Team">Das Team</a></li>
+          <li><a href="#Unsere Leistungen">Unsere Leistungen</a></li>
+          <li><a href="#Kontakt">Kontakt</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Kontakt</h4>
+        <p>
+        Musterstraße 12<br>
+        03222 Lübbenau <br>
+        Tel: 03542 123456
+        </p>
+       </div>
+
+      <div>
+        <h4>Öffnungszeiten</h4>
+        <p>
+        Mo–Fr: 6–20 Uhr<br>
+        Sa: 6–18 Uhr<br>
+        So: 6-13 Uhr
+        </p>
+      </div>
+      <div class="footer-bottom">
+      © 2026 Bäckerei Schmidt · Mit ❤️ gebacken
+    </div>
+  </footer>
+
+
+  </div>
+    <script src="scripts/timeline1.js"></script> 
+    <script src="scripts/quiz.js"></script> 
+    <script src="scripts/main1.js"></script>
+</body> 
+</html> 

@@ -121,16 +121,14 @@ nav a:hover::after {
   overflow: hidden;
 }
 
-/* Weißer Filter */
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(255, 255, 255, 0.404); /* Stärke hier anpassen */
+  background: rgba(255, 255, 255, 0.404); 
   z-index: 1;
 }
 
-/* Inhalt über Overlay */
 .hero > * {
   position: relative;
   z-index: 2;
@@ -663,6 +661,7 @@ footer a:hover {
   }
 
 }
+
 
 
 

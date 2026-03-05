@@ -342,6 +342,117 @@ nav a:hover::after {
 .lightbox-arrow:hover {
   color: var(--gold);
 }
+
+.audio-player {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Startbutton */
+
+.start-audio {
+  border: none;
+  background: var(--gold);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+
+.start-audio:hover {
+  transform: translateY(-2px);
+}
+
+/* Player Elemente */
+
+.play-btn,
+.progress-container,
+.time {
+  display: none;
+}
+
+/* Wenn Player aktiv */
+
+.audio-player.active .start-audio {
+  display: none;
+}
+
+.audio-player.active .play-btn,
+.audio-player.active .progress-container,
+.audio-player.active .time {
+  display: block;
+}
+
+/* Premium Player Layout */
+
+.audio-player.active {
+  background: #ffffff;
+  padding: 10px 15px;
+  border-radius: 40px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+/* Play Button */
+
+.play-btn {
+  border: none;
+  background: var(--gold);
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Progressbar */
+
+.progress-container {
+  flex: 1;
+  height: 6px;
+  background: #eee;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.progress {
+  height: 100%;
+  width: 0%;
+  background: var(--gold);
+  border-radius: 10px;
+}
+
+.time {
+  font-size: 0.8rem;
+  color: #666;
+  min-width: 45px;
+}
+.audio-player {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.audio-player .play-btn,
+.audio-player .progress-container,
+.audio-player .time {
+  display: none;
+}
+
+.audio-player.active .play-btn,
+.audio-player.active .progress-container,
+.audio-player.active .time {
+  display: block;
+}
+
+.audio-player.active .start-audio {
+  display: none;
+}
+
 /* ======================================================
    6. GALLERY
 ====================================================== */
@@ -680,6 +791,7 @@ footer a:hover {
   }
 
 }
+
 
 
 

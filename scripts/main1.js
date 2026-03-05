@@ -127,3 +127,4 @@ thumbnail.addEventListener("click", () => {
   video.style.display = "block";
   video.play();
 });
+

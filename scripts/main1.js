@@ -119,3 +119,11 @@ document.addEventListener("keydown", e => {
 
 });
 
+const thumbnail = document.getElementById("videoThumbnail");
+const video = document.getElementById("timelineVideo");
+
+thumbnail.addEventListener("click", () => {
+  thumbnail.style.display = "none";
+  video.style.display = "block";
+  video.play();
+});

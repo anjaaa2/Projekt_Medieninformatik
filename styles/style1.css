@@ -121,14 +121,16 @@ nav a:hover::after {
   overflow: hidden;
 }
 
+/* Weißer Filter */
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(255, 255, 255, 0.404); 
+  background: rgba(255, 255, 255, 0.404); /* Stärke hier anpassen */
   z-index: 1;
 }
 
+/* Inhalt über Overlay */
 .hero > * {
   position: relative;
   z-index: 2;
@@ -342,7 +344,6 @@ nav a:hover::after {
 .lightbox-arrow:hover {
   color: var(--gold);
 }
-
 .audio-player {
   margin-top: 20px;
   display: flex;
@@ -452,7 +453,6 @@ nav a:hover::after {
 .audio-player.active .start-audio {
   display: none;
 }
-
 /* ======================================================
    6. GALLERY
 ====================================================== */
@@ -620,13 +620,12 @@ nav a:hover::after {
    8. FOOTER
 ====================================================== */
 footer {
-  background: #b3781f;  
-  padding: 40px 0;       
+  background: #b3781f; 
+  padding: 40px 0;      
 }
 
 .footer-grid {
   max-width: 1100px;
-  background: #b3781f;
   margin: auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -791,10 +790,6 @@ footer a:hover {
   }
 
 }
-
-
-
-
 
 
 
